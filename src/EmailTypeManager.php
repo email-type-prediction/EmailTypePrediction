@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace EmailTypePrediction\EmailTypePrediction;
@@ -56,7 +57,7 @@ class EmailTypeManager
      * @return bool
      * @throws InvalidEmailException|InvalidTypeException|InvalidPathException
      */
-    private function checkByEmailAndType(string $email, string $type) : bool
+    private function checkByEmailAndType(string $email, string $type): bool
     {
         $this->validateEmail($email);
         $this->validateType($type);
