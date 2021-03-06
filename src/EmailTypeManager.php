@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction;
+namespace EmailTypePrediction;
 
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidEmailException;
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidPathException;
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidTypeException;
-use EmailTypePrediction\EmailTypePrediction\Services\EmailType;
-use EmailTypePrediction\EmailTypePrediction\Services\FilePath;
+use EmailTypePrediction\Exceptions\InvalidEmailException;
+use EmailTypePrediction\Exceptions\InvalidPathException;
+use EmailTypePrediction\Exceptions\InvalidTypeException;
+use EmailTypePrediction\Services\EmailType;
+use EmailTypePrediction\Services\FilePath;
 
 class EmailTypeManager
 {

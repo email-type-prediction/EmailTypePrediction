@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction\Services;
+namespace EmailTypePrediction\Services;
 
 class EmailType
 {
