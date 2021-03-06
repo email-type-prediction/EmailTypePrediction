@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction\Exceptions;
+namespace Prediction\EmailType\Exceptions;
 
 use Exception;
 
