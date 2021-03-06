@@ -11,6 +11,10 @@
         {
             "name": "Yonchi",
             "email": "2yonchi@gmail.com"
+        },
+        {
+            "name": "Email Type Prediction Community",
+            "homepage": "https://github.com/email-type-prediction/EmailTypePrediction/graphs/contributors"
         }
     ],
     "require": {
