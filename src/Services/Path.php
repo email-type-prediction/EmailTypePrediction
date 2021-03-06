@@ -54,11 +54,6 @@ class Path
     private function validate(?string $path): void
     {
         if (is_null($path) || in_array($path, self::values(), true) === false) {
-        throw new InvalidPathException();
-        }
-            throw new InvalidPathException();
-        }
-        if (!in_array($path, self::values(), true)){
             throw new InvalidPathException();
         }
     }
