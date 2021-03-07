@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace EPrediction\EmailType;
@@ -56,12 +57,19 @@ class EmailTypeManager
      * @return bool
      * @throws InvalidEmailException|InvalidTypeException|InvalidPathException
      */
-    private function checkByEmailAndType(string $email, string $type) : bool
+    private function checkByEmailAndType(string $email, string $type): bool
     {
         $this->validateEmail($email);
         $this->validateType($type);
 
-        $domain = substr(strstr($email, '@'), 1);
+        $domain = strstr($email, '@');
+
+        if (is_string($domain) === false && $domain !== '') {
+            throw new InvalidEmailException('Could not identify the domain in the email address');
+        }
+
+        $domain = substr($domain, 1);
+
         $fileName = (new FilePath())->getFilePath($domain, $type);
 
         return file_exists($fileName);
@@ -74,7 +82,7 @@ class EmailTypeManager
      */
     private function validateEmail(string $email): void
     {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (strlen($email) <= 1 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidEmailException();
         }
     }
