@@ -1,4 +1,4 @@
-name: Code style
+name: Code style and Static Analysis
 
 on:
     pull_request:
@@ -21,3 +21,19 @@ jobs:
 
             - name: Run script
               run: composer check-style
+
+    phpstan:
+        name: PHPStan
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+
+            - name: Install dependencies
+              run: composer install
+
+            - name: Run script
+              run: composer phpstan
