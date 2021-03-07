@@ -12,7 +12,7 @@ class Path
     private const PATH_BLOCK_LIST = 'block-list';
     private const PATH_DISPOSABLE = 'disposable';
     private const PATH_EDUCATION = 'edu';
-    
+
     /**
      * @return string[]
      */
@@ -26,6 +26,9 @@ class Path
         ];
     }
 
+    /**
+     * @return string[]
+     */
     public static function mapperPathToEmailType(): array
     {
         return [
@@ -45,20 +48,11 @@ class Path
     public function getPathByType(string $type): string
     {
         $path = array_search($type, self::mapperPathToEmailType(), true);
-        $this->validate($path);
 
-        return $path;
-    }
-
-    /**
-     * @param string|null $path
-     *
-     * @throws InvalidPathException
-     */
-    private function validate(?string $path): void
-    {
-        if (is_null($path) || in_array($path, self::values(), true) === false) {
+        if (is_string($path) === false || in_array($path, self::values(), true) === false) {
             throw new InvalidPathException();
         }
+
+        return $path;
     }
 }
