@@ -11,6 +11,9 @@ class EmailType
     public const DOMAIN_TYPE_EDU_MAIL = 'edu';
     public const DOMAIN_TYPE_BLOCK_LIST_MAIL = 'block-list';
 
+    /**
+     * @return string[]
+     */
     public static function values(): array
     {
         return  [
