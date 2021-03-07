@@ -12,7 +12,10 @@ class Path
     private const PATH_BLOCK_LIST = 'block-list';
     private const PATH_DISPOSABLE = 'disposable';
     private const PATH_EDUCATION = 'edu';
-
+    
+    /**
+     * @return string[]
+     */
     public static function values(): array
     {
         return  [
