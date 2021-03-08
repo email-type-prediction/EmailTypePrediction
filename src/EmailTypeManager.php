@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction;
+namespace EPrediction\EmailType;
 
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidEmailException;
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidPathException;
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidTypeException;
-use EmailTypePrediction\EmailTypePrediction\Services\EmailType;
-use EmailTypePrediction\EmailTypePrediction\Services\FilePath;
+use Prediction\EmailType\Exceptions\InvalidEmailException;
+use Prediction\EmailType\Exceptions\InvalidPathException;
+use Prediction\EmailType\Exceptions\InvalidTypeException;
+use Prediction\EmailType\Services\EmailType;
+use Prediction\EmailType\Services\FilePath;
 
 class EmailTypeManager
 {

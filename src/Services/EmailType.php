@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction\Services;
+namespace Prediction\EmailType\Services;
 
 class EmailType
 {

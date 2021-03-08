@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace EmailTypePrediction\EmailTypePrediction\Services;
+namespace Prediction\EmailType\Services;
 
-use EmailTypePrediction\EmailTypePrediction\Exceptions\InvalidPathException;
+use Prediction\EmailType\Exceptions\InvalidPathException;
 
 class FilePath
 {
